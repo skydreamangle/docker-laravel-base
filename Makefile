@@ -1,5 +1,5 @@
 CONTAINER = baseimg
-IMAGE = movark/baseimg
+IMAGE = baseimg
 TAG = latest
 
 image:
