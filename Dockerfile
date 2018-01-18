@@ -1,5 +1,7 @@
 FROM alpine:3.6
 
+MAINTAINER skydreamangle <sofia.lin819@gmail.com>
+
 RUN apk update && \
     apk add nginx bash ca-certificates s6 curl ssmtp php7 php7-phar php7-curl \
     php7-fpm php7-json php7-zlib php7-xml php7-dom php7-ctype php7-opcache php7-zip php7-iconv \
