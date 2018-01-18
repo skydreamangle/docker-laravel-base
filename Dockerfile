@@ -18,6 +18,8 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN curl -sS https://getcomposer.org/installer | php -- --filename=/usr/local/bin/composer
 
 ONBUILD RUN rm -rf /var/www/* && mkdir /var/www/app
+ONBUILD RUN composer global require "laravel/installer"
+ONBUILD RUN composer create-project --prefer-dist laravel/laravel project-name
 
 ONBUILD COPY files/php/conf.d/local.ini /etc/php7/conf.d/
 ONBUILD COPY files/php/php-fpm.conf /etc/php7/
